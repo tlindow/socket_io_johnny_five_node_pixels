@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    $(function() {
+      var socket = io();
+      var buttonState = "ON"
+      $('#button').click(function() {
+        if (buttonState === "ON") {
+          buttonState = "OFF"
+        } else if (buttonState === "OFF") {
+          buttonState = "ON"
+        }
+        console.log(buttonState);
+        socket.emit('click', buttonState);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <button id="button" href="#">LED ON/OFF</button>
+</body>
+
+</html>
