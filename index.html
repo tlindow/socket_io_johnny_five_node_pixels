@@ -6,22 +6,133 @@
   <script>
     $(function() {
       var socket = io();
-      var buttonState = "ON"
-      $('#button').click(function() {
-        if (buttonState === "ON") {
-          buttonState = "OFF"
-        } else if (buttonState === "OFF") {
-          buttonState = "ON"
+      var led_1 = "OFF";
+      var led_2 = "OFF";
+      var led_3 = "OFF";
+      var led_4 = "OFF";
+      var led_5 = "OFF";
+      var led_6 = "OFF";
+      var led_7 = "OFF";
+      var led_8 = "OFF";
+      var led_9 = "OFF";
+      var led_10 = "OFF";
+      var led_11 = "OFF";
+
+      $('#led_1').click(function() {
+        if (led_1 === "ON") {
+          led_1 = "OFF"
+        } else if (led_1 === "OFF") {
+          led_1 = "ON"
         }
-        console.log(buttonState);
-        socket.emit('click', buttonState);
-      });
-    });
+        console.log(led_1);
+        socket.emit('A', led_1);
+      })
+      $('#led_2').click(function() {
+        if (led_2 === "ON") {
+          led_2 = "OFF"
+        } else if (led_2 === "OFF") {
+          led_2 = "ON"
+        }
+        console.log(led_2);
+        socket.emit('B', led_2);
+      })
+      $('#led_3').click(function() {
+        if (led_3 === "ON") {
+          led_3 = "OFF"
+        } else if (led_3 === "OFF") {
+          led_3 = "ON"
+        }
+        console.log(led_3);
+        socket.emit('C', led_3);
+      })
+      $('#led_4').click(function() {
+        if (led_4 === "ON") {
+          led_4 = "OFF"
+        } else if (led_4 === "OFF") {
+          led_4 = "ON"
+        }
+        console.log(led_4);
+        socket.emit('D', led_4);
+      })
+      $('#led_5').click(function() {
+        if (led_5 === "ON") {
+          led_5 = "OFF"
+        } else if (led_5 === "OFF") {
+          led_5 = "ON"
+        }
+        console.log(led_5);
+        socket.emit('E', led_5);
+      })
+      $('#led_6').click(function() {
+        if (led_6 === "ON") {
+          led_6 = "OFF"
+        } else if (led_6 === "OFF") {
+          led_6 = "ON"
+        }
+        console.log(led_6);
+        socket.emit('F', led_6);
+      })
+      $('#led_7').click(function() {
+        if (led_7 === "ON") {
+          led_7 = "OFF"
+        } else if (led_7 === "OFF") {
+          led_7 = "ON"
+        }
+        console.log(led_7);
+        socket.emit('G', led_7);
+      })
+      $('#led_8').click(function() {
+        if (led_8 === "ON") {
+          led_8 = "OFF"
+        } else if (led_8 === "OFF") {
+          led_8 = "ON"
+        }
+        console.log(led_8);
+        socket.emit('H', led_8);
+      })
+      $('#led_9').click(function() {
+        if (led_9 === "ON") {
+          led_9 = "OFF"
+        } else if (led_9 === "OFF") {
+          led_9 = "ON"
+        }
+        console.log(led_9);
+        socket.emit('I', led_9);
+      })
+      $('#led_10').click(function() {
+        if (led_10 === "ON") {
+          led_10 = "OFF"
+        } else if (led_10 === "OFF") {
+          led_10 = "ON"
+        }
+        console.log(led_10);
+        socket.emit('J', led_10);
+      })
+      $('#led_11').click(function() {
+        if (led_11 === "ON") {
+          led_11 = "OFF"
+        } else if (led_11 === "OFF") {
+          led_11 = "ON"
+        }
+        console.log(led_11);
+        socket.emit('K', led_11);
+      })
+    })
   </script>
 </head>
 
 <body>
-  <button id="button" href="#">LED ON/OFF</button>
+  <button id="led_1" href="#">LED 1</button>
+  <button id="led_2" href="#">LED 2</button>
+  <button id="led_3" href="#">LED 3</button>
+  <button id="led_4" href="#">LED 4</button>
+  <button id="led_5" href="#">LED 5</button>
+  <button id="led_6" href="#">LED 6</button>
+  <button id="led_7" href="#">LED 7</button>
+  <button id="led_8" href="#">LED 8</button>
+  <button id="led_9" href="#">LED 9</button>
+  <button id="led_10" href="#">LED 10</button>
+  <button id="led_11" href="#">LED 11</button>
 </body>
 
 </html>
