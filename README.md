@@ -4,6 +4,7 @@
 Go to project folder
 npm install
 Connect two Arduinos to computer
+Connect 11 neo pixel lights
 node script.js
 open localhost://3000
 press some buttons to control the lights!
